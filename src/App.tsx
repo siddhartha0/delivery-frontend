@@ -1,5 +1,3 @@
-function App() {
-  return <div className="text-3xl text-brand">hello</div>;
+export default function App() {
+  return <div>hello</div>;
 }
-
-export default App;

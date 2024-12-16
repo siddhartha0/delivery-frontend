@@ -1,2 +1,2 @@
-export { Login } from "./auth";
+export { Login } from "./ui/auth";
 export { Button, Text } from "./shared";

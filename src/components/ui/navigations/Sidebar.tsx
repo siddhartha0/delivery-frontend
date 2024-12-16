@@ -1,131 +1,76 @@
-import {
-  Calendar,
-  FileText,
-  Grid,
-  Mail,
-  MessageSquare,
-  ShoppingCart,
-  Truck,
-  Users,
-} from "lucide-react";
+import { Link } from "react-router-dom";
+import { Icon } from "@iconify/react";
+import { Text } from "../../shared";
 
 const SidebarData = [
   {
     id: 1,
     title: "Dashboard",
     icon: "material-symbols:dashboard",
+    path: "/vendor",
   },
   {
     id: 2,
-    title: "Orders",
+    title: "Create Order",
     icon: "lets-icons:order",
+    path: "/vendor/orders",
+  },
+  {
+    id: 6,
+    title: "View Orders",
+    icon: "fluent-mdl2:activate-orders",
+    path: "/vendor/view-orders",
   },
   {
     id: 3,
     title: "Chat",
     icon: "mdi:message-outline",
+    path: "/vendor/chat",
   },
   {
     id: 4,
     title: "Customers",
     icon: "fe:user",
+    path: "/vendor/customers",
   },
   {
     id: 5,
     title: "Settings",
     icon: "lets-icons:order",
+    path: "/vendor/settings",
   },
 ];
+interface SidebarProps {
+  isNavbarVisible: boolean;
+}
 
-export const Sidebar = () => {
+export const Sidebar = ({ isNavbarVisible }: SidebarProps) => {
+  const pathName = window.location.pathname;
+
   return (
-    <aside className="w-64 h-screen fixed left-0 overflow-scroll bg-white shadow-md">
-      <div className="p-4">
-        <h2 className="text-xl font-bold text-[#4338ca] mb-6">Vendor Panel</h2>
-        <nav>
-          <ul className="space-y-2">
-            <li>
-              <a
-                href="#"
-                className="flex items-center space-x-3 text-[#4338ca] bg-[#eff6ff] rounded-lg p-3"
+    <aside
+      className={`bg-gray-800 text-white w-64 h-screen transition-all duration-300 ${
+        isNavbarVisible ? "mt-20" : "mt-4"
+      }`}
+    >
+      <div className="flex flex-col gap-5 p-4">
+        <nav className="flex flex-col gap-2">
+          {SidebarData.map((sidebar) => (
+            <section className="flex flex-col gap-2" key={sidebar.id}>
+              <Link
+                to={sidebar.path}
+                className={`flex items-center space-x-3 ${
+                  sidebar.path === pathName
+                    ? "bg-[#eff6ff] text-second-brand"
+                    : "text-dark"
+                } rounded-lg p-3`}
+                key={sidebar.id}
               >
-                <Grid className="h-5 w-5" />
-                <span className="font-medium">Dashboard</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center space-x-3 text-gray-700 hover:bg-gray-100 rounded-lg p-3"
-              >
-                <Truck className="h-5 w-5" />
-                <span>Courier System</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center space-x-3 text-gray-700 hover:bg-gray-100 rounded-lg p-3"
-              >
-                <Users className="h-5 w-5" />
-                <span>CRM</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center space-x-3 text-gray-700 hover:bg-gray-100 rounded-lg p-3"
-              >
-                <Users className="h-5 w-5" />
-                <span>HRM</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center space-x-3 text-gray-700 hover:bg-gray-100 rounded-lg p-3"
-              >
-                <ShoppingCart className="h-5 w-5" />
-                <span>ECommerce</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center space-x-3 text-gray-700 hover:bg-gray-100 rounded-lg p-3"
-              >
-                <Calendar className="h-5 w-5" />
-                <span>Calendar</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center space-x-3 text-gray-700 hover:bg-gray-100 rounded-lg p-3"
-              >
-                <MessageSquare className="h-5 w-5" />
-                <span>Chat</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center space-x-3 text-gray-700 hover:bg-gray-100 rounded-lg p-3"
-              >
-                <Mail className="h-5 w-5" />
-                <span>Email</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center space-x-3 text-gray-700 hover:bg-gray-100 rounded-lg p-3"
-              >
-                <FileText className="h-5 w-5" />
-                <span>Email Templates</span>
-              </a>
-            </li>
-          </ul>
+                <Icon icon={sidebar.icon} className="h-5 w-5" />
+                <Text size="body-md-default">{sidebar.title}</Text>
+              </Link>
+            </section>
+          ))}
         </nav>
       </div>
     </aside>
