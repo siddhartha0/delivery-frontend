@@ -49,9 +49,7 @@ export const OrdersGraphs = ({
               {
                 label: "Orders",
                 data: dailyOrders.data,
-                backgroundColor: "#05c192",
-                borderColor: "rgba(67, 56, 202, 1)",
-                borderWidth: 1,
+                backgroundColor: "#2563EB",
               },
             ],
           }}
@@ -62,6 +60,7 @@ export const OrdersGraphs = ({
                 display: false,
               },
             },
+
             scales: {
               y: {
                 beginAtZero: true,
