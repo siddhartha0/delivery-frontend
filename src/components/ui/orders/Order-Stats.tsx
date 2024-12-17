@@ -17,11 +17,9 @@ export const OrderStats = ({
     <div className="grid grid-cols-4 gap-4">
       <div className="bg-white rounded-lg shadow p-6">
         <div className="flex items-center justify-between">
-          <div>
-            <p className="text-sm  text-text-grey font-semibold">
-              Total Orders
-            </p>
-            <p className="text-2xl font-bold text-other-black-600">
+          <div className="flex flex-col gap-1">
+            <p className="text-sm  text-text-grey ">Total Orders</p>
+            <p className="text-2xl font-semibold text-other-black-600">
               {totalOrders}
             </p>
           </div>
@@ -33,9 +31,9 @@ export const OrderStats = ({
 
       <div className="bg-white rounded-lg shadow p-6">
         <div className="flex items-center justify-between">
-          <div>
-            <p className="text-sm font-medium text-grey">Completed</p>
-            <p className="text-3xl font-semibold text-other-black-600">
+          <div className="flex flex-col gap-1">
+            <p className="text-sm text-text-grey">Completed</p>
+            <p className="text-2xl font-semibold text-other-black-600">
               {completedOrders}
             </p>
           </div>
@@ -47,9 +45,9 @@ export const OrderStats = ({
 
       <div className="bg-white rounded-lg shadow p-6">
         <div className="flex items-center justify-between">
-          <div>
-            <p className="text-sm font-medium text-grey">Pending Orders</p>
-            <p className="text-3xl font-semibold text-other-black-600">
+          <div className="flex flex-col gap-1">
+            <p className="text-sm  text-text-grey">Pending Orders</p>
+            <p className="text-2xl font-semibold text-other-black-600">
               {pendingOrders}
             </p>
           </div>
@@ -61,9 +59,9 @@ export const OrderStats = ({
 
       <div className="bg-white rounded-lg shadow p-6">
         <div className="flex items-center justify-between">
-          <div>
-            <p className="text-sm font-medium text-grey">Total Revenue</p>
-            <p className="text-3xl font-semibold text-other-black-600">
+          <div className="flex flex-col gap-1">
+            <p className="text-sm  text-text-grey">Total Revenue</p>
+            <p className="text-2xl font-semibold text-other-black-600">
               Rs.{totalRevenue.toFixed(0)}
             </p>
           </div>

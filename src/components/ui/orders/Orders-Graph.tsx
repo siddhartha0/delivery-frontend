@@ -38,8 +38,10 @@ export const OrdersGraphs = ({
   return (
     <div className="grid grid-cols-2 gap-4">
       {/* Daily Orders Bar Chart */}
-      <div className=" p-4 rounded-lg bg-other-white-100  shadow">
-        <h3 className="text-lg font-semibold mb-4">How many orders in a day</h3>
+      <div className=" p-6 rounded-lg bg-white  shadow">
+        <h3 className="text-lg font-semibold text-other-black-600 mb-4">
+          How many orders in a day
+        </h3>
         <Bar
           data={{
             labels: dailyOrders.labels,
@@ -72,7 +74,7 @@ export const OrdersGraphs = ({
       {/* Products and Map Section */}
       <div className="space-y-4">
         {/* Products Section */}
-        <div className="bg-other-white-100 p-6 rounded-lg shadow border-gray-200">
+        <div className="bg-white p-6 rounded-lg shadow border-gray-200">
           <h3 className="text-lg font-semibold mb-4">Products</h3>
           <div className="space-y-3">
             {products.labels.map((label, index) => (
@@ -93,7 +95,7 @@ export const OrdersGraphs = ({
         </div>
 
         {/* Map Placeholder */}
-        <div className="bg-other-white-100 p-6 rounded-lg shadow">
+        <div className="bg-white p-6 rounded-lg shadow">
           <h3 className="text-lg font-semibold mb-4">Delivery Map</h3>
           <div className="h-[200px] bg-gray-100 rounded-lg flex items-center justify-center">
             Map Visualization

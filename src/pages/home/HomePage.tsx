@@ -7,7 +7,7 @@ export const HomePage = () => {
   const [isNavbarVisible, setIsNavbarVisible] = useState(true);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex bg-grey flex-col">
       <div>
         <Navbar onVisibilityChange={setIsNavbarVisible} />
       </div>
@@ -15,7 +15,7 @@ export const HomePage = () => {
         <div className="fixed left-0">
           <Sidebar isNavbarVisible={isNavbarVisible} />
         </div>
-        <div className="ml-64 mt-20 w-full bg-grey">
+        <div className="ml-64 mt-20 w-full ">
           <Outlet />
         </div>
       </section>
