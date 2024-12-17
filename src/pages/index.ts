@@ -1,2 +1,3 @@
 export { LoginPage } from "./auth";
-export {} from "./orders";
+export { CreateOrderPage, ViewOrdersPage } from "./orders/";
+export { HomePage } from "./home/HomePage";

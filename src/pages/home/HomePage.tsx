@@ -15,7 +15,7 @@ export const HomePage = () => {
         <div className="fixed left-0">
           <Sidebar isNavbarVisible={isNavbarVisible} />
         </div>
-        <div className="ml-32 mt-20 w-full">
+        <div className="ml-64 mt-20 w-full bg-grey">
           <Outlet />
         </div>
       </section>

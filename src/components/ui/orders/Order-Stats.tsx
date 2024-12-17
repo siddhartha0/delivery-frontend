@@ -14,58 +14,61 @@ export const OrderStats = ({
   totalRevenue,
 }: OrderStatsProps) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div className="grid grid-cols-4 gap-4">
       <div className="bg-white rounded-lg shadow p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-gray-500">Total Orders</p>
-            <p className="text-3xl font-semibold text-gray-900">
+            <p className="text-sm  text-text-grey font-semibold">
+              Total Orders
+            </p>
+            <p className="text-2xl font-bold text-other-black-600">
               {totalOrders}
             </p>
           </div>
-          <div className="bg-blue-100 rounded-full p-3">
-            <Package className="h-6 w-6 text-blue-600" />
+          <div className="bg-fadish-blue rounded-full p-3">
+            <Package className="h-6 w-6 text-darkish-blue" />
           </div>
         </div>
       </div>
+
       <div className="bg-white rounded-lg shadow p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-gray-500">
-              Completed Orders
-            </p>
-            <p className="text-3xl font-semibold text-gray-900">
+            <p className="text-sm font-medium text-grey">Completed</p>
+            <p className="text-3xl font-semibold text-other-black-600">
               {completedOrders}
             </p>
           </div>
-          <div className="bg-green-100 rounded-full p-3">
-            <TrendingUp className="h-6 w-6 text-green-600" />
+          <div className="bg-fadish-green rounded-full p-3">
+            <TrendingUp className="h-6 w-6 text-complete" />
           </div>
         </div>
       </div>
+
       <div className="bg-white rounded-lg shadow p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-gray-500">Pending Orders</p>
-            <p className="text-3xl font-semibold text-gray-900">
+            <p className="text-sm font-medium text-grey">Pending Orders</p>
+            <p className="text-3xl font-semibold text-other-black-600">
               {pendingOrders}
             </p>
           </div>
-          <div className="bg-yellow-100 rounded-full p-3">
-            <Clock className="h-6 w-6 text-yellow-600" />
+          <div className="bg-fadish-yellow rounded-full p-3">
+            <Clock className="h-6 w-6 text-hold" />
           </div>
         </div>
       </div>
+
       <div className="bg-white rounded-lg shadow p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-gray-500">Total Revenue</p>
-            <p className="text-3xl font-semibold text-gray-900">
-              ${totalRevenue.toFixed(2)}
+            <p className="text-sm font-medium text-grey">Total Revenue</p>
+            <p className="text-3xl font-semibold text-other-black-600">
+              Rs.{totalRevenue.toFixed(0)}
             </p>
           </div>
-          <div className="bg-purple-100 rounded-full p-3">
-            <DollarSign className="h-6 w-6 text-purple-600" />
+          <div className="bg-fadish-purple rounded-full p-3">
+            <DollarSign className="h-6 w-6 text-second-brand" />
           </div>
         </div>
       </div>
