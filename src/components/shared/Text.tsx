@@ -82,7 +82,7 @@ export const Text = React.memo(
           "text-[28px] font-medium": size === "heading-xsm-default",
           "md:text-[22px]  font-medium": size === "body-lg-default",
           "lg::text-[20px] text-[16px] font-medium": size === "body-md-default",
-          "text-[18px] font-medium": size === "body-sm-default",
+          "text-[13px] font-medium": size === "body-sm-default",
           //-------------End of Default or 500px  font-----------------//
 
           //------------- Mid or 600px  & font with different sizes-----------------//
@@ -95,7 +95,7 @@ export const Text = React.memo(
           "text-[28px] font-semibold": size === "heading-xsm-mid",
           "text-[22px] font-semibold": size === "body-lg-mid",
           "text-[20px] font-semibold": size === "body-md-mid",
-          "text-[18px] font-semibold": size === "body-sm-mid",
+          "text-[13px] font-semibold": size === "body-sm-mid",
           //-------------End of Mid or 600px  font-----------------//
 
           //------------- Rare or 700px  & font with different sizes-----------------//
@@ -110,7 +110,7 @@ export const Text = React.memo(
           "text-[28px] font-bold": size === "heading-xsm-rare",
           "text-[22px] font-bold": size === "body-lg-rare",
           "text-[20px] font-bold": size === "body-md-rare",
-          "text-[18px] font-bold": size === "body-sm-rare",
+          "text-[13px] font-bold": size === "body-sm-rare",
           //-------------End of Rare or 700px  font-----------------//
           //--------------------END of Size & FONT WEIGHT-------------------------//
 

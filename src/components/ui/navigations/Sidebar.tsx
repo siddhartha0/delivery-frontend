@@ -49,7 +49,7 @@ export const Sidebar = ({ isNavbarVisible }: SidebarProps) => {
 
   return (
     <aside
-      className={`bg-gray-800 text-white w-64 h-screen transition-all duration-300 ${
+      className={`bg-white  shadow w-64 h-screen transition-all duration-300 ${
         isNavbarVisible ? "mt-20" : "mt-4"
       }`}
     >
@@ -61,13 +61,15 @@ export const Sidebar = ({ isNavbarVisible }: SidebarProps) => {
                 to={sidebar.path}
                 className={`flex items-center space-x-3 ${
                   sidebar.path === pathName
-                    ? "bg-[#eff6ff] text-second-brand"
+                    ? "bg-[#eff6ff] shadow text-second-brand"
                     : "text-dark"
                 } rounded-lg p-3`}
                 key={sidebar.id}
               >
                 <Icon icon={sidebar.icon} className="h-5 w-5" />
-                <Text size="body-md-default">{sidebar.title}</Text>
+                <Text usage="black" size="body-sm-default">
+                  {sidebar.title}
+                </Text>
               </Link>
             </section>
           ))}
