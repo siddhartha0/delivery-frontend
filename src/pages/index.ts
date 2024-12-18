@@ -1,3 +1,3 @@
-export { LoginPage } from "./auth";
-export { CreateOrderPage, ViewOrdersPage } from "./orders/";
-export { HomePage } from "./home/HomePage";
+export { LoginPage, RegisterPage } from "./auth";
+export { CreateOrderPage, ViewOrdersPage } from "./vendor/orders";
+export { HomePage } from "./vendor/home/HomePage";

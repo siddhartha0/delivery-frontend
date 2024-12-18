@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import { Navbar } from "../../components/ui/navigations/Navbar";
-import { Sidebar } from "../../components/ui/navigations/Sidebar";
+import { Navbar } from "../../../components/ui/navigations/Navbar";
+import { Sidebar } from "../../../components/ui/navigations/Sidebar";
 import { useState } from "react";
 
 export const HomePage = () => {

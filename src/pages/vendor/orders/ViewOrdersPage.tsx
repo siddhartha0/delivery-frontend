@@ -1,6 +1,6 @@
-import { OrderList } from "../../components/ui/orders/Order-Lists";
-import { OrderStats } from "../../components/ui/orders/Order-Stats";
-import { OrdersGraphs } from "../../components/ui/orders/Orders-Graph";
+import { OrderList } from "../../../components/ui/orders/Order-Lists";
+import { OrderStats } from "../../../components/ui/orders/Order-Stats";
+import { OrdersGraphs } from "../../../components/ui/orders/Orders-Graph";
 
 const mockStats = {
   totalOrders: 150,
