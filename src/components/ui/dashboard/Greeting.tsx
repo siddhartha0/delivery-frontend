@@ -48,7 +48,7 @@ export const GreetingHeader = () => {
             <div className="relative z-10 p-3">{icon}</div>
           </div>
           <div>
-            <h1 className="text-2xl font-semibold text-text-grey mb-1">
+            <h1 className="text-sm font-semibold text-text-grey mb-1">
               {greeting}
             </h1>
             <div className="flex items-center text-gray-500 text-sm">

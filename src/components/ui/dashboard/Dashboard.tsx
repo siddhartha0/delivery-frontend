@@ -1,7 +1,10 @@
 import { Text } from "../../shared";
+import { DeliveryPerformance } from "./Delivery-Performance";
+import { GraphStats } from "./Graph-Stats";
 import { GreetingHeader } from "./Greeting";
-import QuickAccessCard from "./QuickAccessCard";
-import { Package, Truck, BarChart2, Settings, ShoppingBag } from "lucide-react";
+import { Informationpanel } from "./Information-Panel";
+import { informations } from "./information.data";
+import { StatsCard } from "./StatsCard";
 
 export const Dashboard = () => {
   return (
@@ -10,31 +13,46 @@ export const Dashboard = () => {
         <Text usage="brand">Dashboard</Text>
       </section>
 
-      <section className="flex">
-        <div className="flex flex-col gap-4">
-          <div className="grid grid-cols-2 gap-10 ">
-            <GreetingHeader />
-            <section className="flex flex-col">
-              <div className="relative">
-                {/* Rhombus-shaped background */}
-                <svg
-                  width="56"
-                  height="56"
-                  viewBox="0 0 56 56"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="absolute top-0 left-0"
-                >
-                  <path d="M28 0L56 28L28 56L0 28L28 0Z" fill="#22C55E" />
-                </svg>
+      <section className="flex  gap-4">
+        <div className="grid grid-cols-2 gap-5 ">
+          <GreetingHeader />
+          <StatsCard
+            label="Total orders"
+            trend="up"
+            trendValue="+2.14%"
+            type="orders"
+            value="52"
+          />
+          <StatsCard
+            label="Paid Orders"
+            trend="down"
+            trendValue="-2.14%"
+            type="sales"
+            value="20"
+          />
+          <StatsCard
+            label="Total Earnings"
+            trend="down"
+            trendValue="+2.14%"
+            type="revenue"
+            value="Rs. 2000"
+          />
+        </div>
 
-                {/* Icon */}
-                <div className="relative z-10 p-1 flex ">
-                  <ShoppingBag className="h-6 w-6 text-white" />
-                </div>
-              </div>
-            </section>
-          </div>
+        <div className="bg-white flex flex-col gap-2  p-4 rounded-xl shadow hover:shadow-md transition-shadow">
+          <Text usage="black" size="body-sm-default" className="uppercase">
+            category by gender
+          </Text>
+          <GraphStats />
+        </div>
+      </section>
+
+      <section className="flex gap-10">
+        <div className="bg-white flex flex-col gap-2  p-6 rounded-xl shadow hover:shadow-md transition-shadow">
+          <DeliveryPerformance />
+        </div>
+        <div className="bg-white flex flex-col gap-2  p-6 rounded-xl shadow hover:shadow-md transition-shadow">
+          <Informationpanel notifications={informations} />
         </div>
       </section>
     </div>
